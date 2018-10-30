@@ -211,9 +211,11 @@ public class DetailActivity extends AppCompatActivity implements
             String high = SunshineWeatherUtils.formatTemperature(this,highRaw);
 
 
-            double humidity = data.getDouble(HUMIDITY_INDEX);
+            float humidityRaw = data.getFloat(HUMIDITY_INDEX);
+            String humidity = getString(R.string.format_humidity,humidityRaw);
 
-            double pressure = data.getDouble(PRESSURE_INDEX);
+            float pressureRaw = data.getFloat(PRESSURE_INDEX);
+            String pressure = getString(R.string.format_pressure,pressureRaw);
 
             float windSpeed = data.getFloat(WIND_SPEED_INDEX);
             float windDegrees = data.getFloat(WIND_DEGREES_INDEX);
